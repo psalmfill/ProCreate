@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Pro Create</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="name">Name</string>
+    <string name="name_hint">Enter name</string>
+    <string name="email_hint">Enter email</string>
+    <string name="password_hint">Enter password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="course">Course</string>
+    <string name="course_hint">select a course</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
