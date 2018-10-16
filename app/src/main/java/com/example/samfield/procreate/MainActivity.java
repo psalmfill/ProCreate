@@ -7,36 +7,39 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private Button loginbutton;
-    private Button registractionbutton;
+    private Button regswitchbtn;
+    private Button registrationbutton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         loadLoginFrag();
         loginbutton = findViewById(R.id.loginbutton);
-        registractionbutton = findViewById(R.id.reg_button);
+        regswitchbtn = findViewById(R.id.reg_button);
+
 
 
         loginbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loginbutton.setBackgroundResource(R.drawable.buttonsolidradius);
-                registractionbutton.setBackgroundResource(R.drawable.buttonroundedboarder);
-                registractionbutton.setTextColor(getResources().getColor(R.color.colorPrimary));
-                loginbutton.setTextColor(getResources().getColor(R.color.colorWhite));
+                loginbutton.setBackgroundResource(R.drawable.buttonroundedboarder);
+                regswitchbtn.setBackgroundResource(R.drawable.buttonsolidradius);
+                regswitchbtn.setTextColor(getResources().getColor(R.color.colorWhite));
+                loginbutton.setTextColor(getResources().getColor(R.color.colorPrimary));
                 loadLoginFrag();
             }
         });
-        registractionbutton.setOnClickListener(new View.OnClickListener() {
+        regswitchbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                registractionbutton.setBackgroundResource(R.drawable.buttonsolidradius);
-                loginbutton.setBackgroundResource(R.drawable.buttonroundedboarder);
-                loginbutton.setTextColor(getResources().getColor(R.color.colorPrimary));
-                registractionbutton.setTextColor(getResources().getColor(R.color.colorWhite));
+                regswitchbtn.setBackgroundResource(R.drawable.buttonroundedboarder);
+                loginbutton.setBackgroundResource(R.drawable.buttonsolidradius);
+                loginbutton.setTextColor(getResources().getColor(R.color.colorWhite));
+                regswitchbtn.setTextColor(getResources().getColor(R.color.colorPrimary));
 
 
                 loadRegistrationFrag();

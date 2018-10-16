@@ -8,7 +8,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
 
 /**
@@ -25,7 +29,12 @@ public class RegistrationFragment extends Fragment {
       "Video Editing",
       "Digital Marketing"
     };
-
+    private Button mRegbtn ;
+    private EditText mName;
+    private EditText mEmail;
+    private EditText mPassword;
+    private EditText mConfirmPassword;
+    private Spinner mCourse;
     public RegistrationFragment() {
         // Required empty public constructor
     }
@@ -49,4 +58,22 @@ public class RegistrationFragment extends Fragment {
         return view;
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        mRegbtn = getView().findViewById(R.id.registration_button);
+        mName = getView().findViewById(R.id.name);
+        mEmail = getView().findViewById(R.id.email);
+        mPassword = getView().findViewById(R.id.password);
+        mConfirmPassword = getView().findViewById(R.id.confirmpassword);
+        mCourse = getView().findViewById(R.id.course_dropdown);
+
+        mRegbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(),"Reg button",Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
 }

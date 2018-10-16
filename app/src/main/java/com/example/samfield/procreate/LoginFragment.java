@@ -9,6 +9,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 
 /**
@@ -20,7 +23,9 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class LoginFragment extends Fragment {
-
+    private Button mLoginbutton;
+    private EditText mEmail;
+    private EditText mPassword;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,5 +37,20 @@ public class LoginFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_login,container,false);
 
         return  view;
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        mLoginbutton = getView().findViewById(R.id.login_btn);
+        mEmail = getView().findViewById(R.id.email);
+        mPassword = getView().findViewById(R.id.password);
+
+        mLoginbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(),"Login Button Clicked",Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
