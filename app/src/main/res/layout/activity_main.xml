@@ -39,6 +39,7 @@
             android:text="@string/register"
             android:textColor="@color/colorWhite"
             app:layout_constraintEnd_toEndOf="@+id/textView4"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/loginbutton"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
@@ -46,20 +47,26 @@
             android:id="@+id/loginbutton"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_weight="1"
             android:background="@drawable/buttonroundedboarder"
             android:text="@string/login"
             android:textColor="@color/colorPrimary"
-            app:layout_constraintStart_toStartOf="@+id/textView4"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
         <FrameLayout
             android:id="@+id/form_frag"
-            android:layout_width="327dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            app:layout_constraintStart_toStartOf="@+id/loginbutton"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/reg_button">
 
 
