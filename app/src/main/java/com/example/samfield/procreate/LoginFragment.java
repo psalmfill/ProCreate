@@ -1,6 +1,7 @@
 package com.example.samfield.procreate;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -50,6 +51,8 @@ public class LoginFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getActivity(),"Login Button Clicked",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getActivity(),HomeActivity.class);
+                startActivity(intent);
             }
         });
     }
