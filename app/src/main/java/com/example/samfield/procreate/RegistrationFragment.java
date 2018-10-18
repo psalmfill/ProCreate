@@ -1,6 +1,7 @@
 package com.example.samfield.procreate;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -32,6 +33,7 @@ public class RegistrationFragment extends Fragment {
     private Button mRegbtn ;
     private EditText mName;
     private EditText mEmail;
+    private EditText mUsername;
     private EditText mPassword;
     private EditText mConfirmPassword;
     private Spinner mCourse;
@@ -65,6 +67,7 @@ public class RegistrationFragment extends Fragment {
         mRegbtn = getView().findViewById(R.id.registration_button);
         mName = getView().findViewById(R.id.name);
         mEmail = getView().findViewById(R.id.email);
+        mUsername = getView().findViewById(R.id.username);
         mPassword = getView().findViewById(R.id.password);
         mConfirmPassword = getView().findViewById(R.id.confirmpassword);
         mCourse = getView().findViewById(R.id.course_dropdown);
@@ -72,7 +75,12 @@ public class RegistrationFragment extends Fragment {
         mRegbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity(),"Reg button",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getActivity(),HomeActivity.class);
+                intent.putExtra("name",mName.getText().toString());
+                intent.putExtra("email", mEmail.getText().toString());
+                intent.putExtra("username", mEmail.getText().toString());
+                intent.putExtra("course",mCourse.getSelectedItem().toString());
+                startActivity(intent);
             }
         });
     }
